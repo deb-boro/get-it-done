@@ -1,0 +1,39 @@
+.header-container {
+  background-color: rgb(16, 16, 16);
+}
+.header-container-content {
+  padding: 25px 0 0 35px;
+}
+.header-content {
+  color: black;
+  font-size: 40px;
+  padding: 1px 7px 1px 7px;
+  display: inline-flex;
+  background-color: rgb(180, 216, 216);
+  margin-bottom: 20px;
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  border-radius: 5px;
+  box-shadow: 5px 5px rgb(133, 130, 130);
+}
+.header-text {
+  padding-left: 10px;
+}
+
+.header-para {
+  color: rgb(163, 197, 199);
+  font-size: large;
+  font-family: 'Open Sans';
+  padding-bottom: 15px;
+}
+button[type='submit'] {
+  background-color: rgb(92, 89, 89);
+  box-shadow: 5px 5px rgb(133, 130, 130);
+  color: white;
+}
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
