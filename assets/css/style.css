@@ -42,22 +42,33 @@ button[type='submit'] {
   margin-top: 2px;
   margin-bottom: 2px;
   padding: 10px;
-  
+
   justify-content: space-between;
   color: aliceblue;
   border-radius: 5px;
-
 }
 .icon-danger {
   background-color: aliceblue;
 
   color: rgba(255, 0, 0, 0.568);
 }
-.icon-success{
-    color:royalblue;
-    background-color: aliceblue
+.icon-success {
+  color: royalblue;
+  background-color: aliceblue;
 }
 
-div.span{
-    padding-left;: 5px
+div.span {
+  padding-left: 5px;
+}
+
+.btn-go-back {
+  background-color: rgb(92, 89, 89);
+  box-shadow: 3px 3px rgb(133, 130, 130);
+  color: white;
+  margin-left: 35px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  border-radius: 5px;
+  font-size: 15px;
 }
