@@ -72,3 +72,6 @@ div.span {
   border-radius: 5px;
   font-size: 15px;
 }
+#language-buttons {
+  display: block;
+}
