@@ -37,3 +37,27 @@ button[type='submit'] {
   display: flex;
   justify-content: space-between;
 }
+.list-item {
+  background-color: grey;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 10px;
+  
+  justify-content: space-between;
+  color: aliceblue;
+  border-radius: 5px;
+
+}
+.icon-danger {
+  background-color: aliceblue;
+
+  color: rgba(255, 0, 0, 0.568);
+}
+.icon-success{
+    color:royalblue;
+    background-color: aliceblue
+}
+
+div.span{
+    padding-left;: 5px
+}
