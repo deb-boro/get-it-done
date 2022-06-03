@@ -1,4 +1,5 @@
 var issueContainerEl = document.querySelector('#issues-container')
+var repoNameEl = document.querySelector('#repo-name')
 
 var displayIssues = function (issues) {
   for (var i = 0; i < issues.length; i++) {
@@ -55,5 +56,14 @@ var getRepoIssues = function (repo) {
     }
   })
 }
-
-getRepoIssues('facebook/react')
+var getRepoName = function () {
+  var queryString = document.location.search
+  var repoName = queryString.split('=')[1]
+  if (repoName) {
+    repoNameEl.textContent = repoName
+    getRepoIssues(repoName)
+  } else {
+    document.location.replace('./index.html')
+  }
+}
+getRepoName()
