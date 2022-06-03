@@ -4,6 +4,10 @@ var repoSearchTerm = document.querySelector('#repo-search-term')
 var repoContainerEl = document.querySelector('#repos-container')
 
 var displayRepos = function (repos, searchTerm) {
+  if (repos.length === 0) {
+    repoContainerEl.textContent = 'No repositories found.'
+    return
+  }
   // clear old content
   repoContainerEl.textContent = ''
   repoSearchTerm.textContent = searchTerm
@@ -49,11 +53,19 @@ var displayRepos = function (repos, searchTerm) {
 var getUserRepos = function (user) {
   var apiUrl = 'https://api.github.com/users/' + user + '/repos'
 
-  fetch(apiUrl).then(function (response) {
-    response.json().then(function (data) {
-      displayRepos(data, user)
+  fetch(apiUrl)
+    .then(function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
+          displayRepos(data, user)
+        })
+      } else {
+        alert('Error: Github User Not Found')
+      }
     })
-  })
+    .catch(function (error) {
+      alert('Unable to connect to Github')
+    })
 }
 
 var formSubmitHandler = function (event) {
